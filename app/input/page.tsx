@@ -1,5 +1,5 @@
-import { title } from "@/components/primitives";
-
+import { Player, Controls } from '@lottiefiles/react-lottie-player';
+import uploadIcon from "../../images/Animation - 1716399977237.json";
 export default function InputPage() {
   return (
     <>
