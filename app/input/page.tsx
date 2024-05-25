@@ -7,7 +7,8 @@ import { Player, Controls } from '@lottiefiles/react-lottie-player';
 import { FaRegFileAlt } from "react-icons/fa";
 import { AiOutlineClose } from 'react-icons/ai'; 
 import { MdOutlineCloudUpload } from "react-icons/md";
-
+import { PiFileC, PiFilesFill } from "react-icons/pi";
+import { Input } from "@nextui-org/input";
 interface FileI {
   file: File;
   size: string;
@@ -96,8 +97,30 @@ export default function Upload(): JSX.Element {
       {/* This is the file input */}
 
 
+      <p className="text-2xl text-center text-gray-700 font-bold my-5">Input</p>
 
-      
+<div className="grid lg:grid-cols-2 grid-cols-1 m-24">
+  <div className="flex items-start justify-center mb-6">
+    <PiFileC className="text-[#3db78a] w-10 h-10" />
+    <Input
+      placeholder="Chunk Size"
+      id="chunk_size"
+      type="text"
+      color="danger"
+      className="mr-4 pt-2 focus:outline-none focus:border-[#b3fae0] border-2 border-[#b3fae0] shadow-md bg-white rounded-md px-4 py-2"
+    />
+  </div>
+  <div className="flex items-start justify-center mb-6">
+    <PiFilesFill className="text-[#3db78a] w-10 h-10" />
+    <Input
+      placeholder="Chunk Overlap"
+      id="chunk_overlap"
+      type="text"
+      color="danger"
+      className="pt-2 focus:outline-none focus:border-[#b3fae0] border-2 border-[#b3fae0] shadow-md bg-white rounded-md px-4 py-2"
+    />
+  </div>
+</div>
     </div>
   );
 }
