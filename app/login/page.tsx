@@ -28,9 +28,11 @@ const LoginPage = () => {
               <p className="mb-4">
                 Enter your personal details to use all of our site features
               </p>
-              <button className="bg-white text-teal-500 py-2 px-4 rounded-full">
-                SignUp
-              </button>
+              <NextLink href="/signup">
+                <button className="bg-white text-teal-500 py-2 px-4 rounded-full">
+                  SignUp
+                </button>
+              </NextLink>
             </div>
           </div>
           <div className="p-6 flex flex-col items-center justify-center h-full">
