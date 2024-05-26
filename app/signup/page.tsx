@@ -1,6 +1,9 @@
 "use client";
 import React from "react";
 import { FaGooglePlusG } from "react-icons/fa";
+import { FaFacebookF } from "react-icons/fa";
+
+// Inside the form, next to the Google Plus icon
 
 // Inside the form
 
@@ -24,6 +27,12 @@ const SignupPage = () => {
                   className="border shadow-md shadow-teal-600 border-teal-300 rounded-full flex items-center justify-center w-10 h-10 text-gray-500"
                 >
                   <FaGooglePlusG />
+                </a>
+                <a
+                  href="#"
+                  className="border shadow-md shadow-teal-600 border-teal-300 rounded-full flex items-center justify-center w-10 h-10 text-gray-500"
+                >
+                  <FaFacebookF />
                 </a>
               </div>
             </form>
