@@ -97,6 +97,17 @@ const LoginPage = () => {
                 type={isVisible ? "text" : "password"}
                 className="max-w-xs mb-2"
               />
+              <NextLink href="/home" passHref>
+                <button
+                  type="button"
+                  title="Start Login"
+                  className="w-full py-3 px-6 text-center rounded-full transition bg-gradient-to-r from-teal-500 via-teal-100/100 to-teal-500 shadow-md sm:w-max"
+                >
+                  <span className="block text-[#1c100c] font-semibold text-sm">
+                    Login
+                  </span>
+                </button>
+              </NextLink>
             </form>
           </div>
         </div>
