@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { FaGooglePlusG, FaFacebookF } from "react-icons/fa";
-
+import { Input } from "@nextui-org/input";
 const LoginPage = () => {
   return (
     <div className="flex items-center justify-center h-screen font-sans">
@@ -40,6 +40,14 @@ const LoginPage = () => {
                   <FaFacebookF />
                 </a>
               </div>
+              <Input
+                placeholder="Enter your name"
+                type="name"
+                label="Name"
+                isRequired
+                variant="bordered"
+                className="max-w-xs mb-2"
+              />
             </form>
           </div>
         </div>
