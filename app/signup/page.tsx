@@ -9,17 +9,17 @@ import { IoEye, IoEyeOff } from "react-icons/io5";
 const SignupPage = () => {
   const [value, setValue] = React.useState("woodcnc@example.com");
 
-const validateEmail = (value) =>
-  value.match(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}$/i);
+  const validateEmail = (value) =>
+    value.match(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}$/i);
 
-const isInvalid = React.useMemo(() => {
-  if (value === "") return false;
-  return validateEmail(value) ? false : true;
-}, [value]);
+  const isInvalid = React.useMemo(() => {
+    if (value === "") return false;
+    return validateEmail(value) ? false : true;
+  }, [value]);
 
-const [isVisible, setIsVisible] = React.useState(false);
+  const [isVisible, setIsVisible] = React.useState(false);
 
-const toggleVisibility = () => setIsVisible(!isVisible);
+  const toggleVisibility = () => setIsVisible(!isVisible);
 
   return (
     <div className="flex items-center justify-center h-screen font-serif">
@@ -68,9 +68,35 @@ const toggleVisibility = () => setIsVisible(!isVisible);
                 onValueChange={setValue}
                 className="max-w-xs mb-2"
               />
-              <NextLink href="/login">
-                <button className="bg-white text-teal-500 py-2 px-4 rounded-full">
-                  Login
+              <Input
+                label="Password"
+                variant="bordered"
+                placeholder="Enter your password"
+                endContent={
+                  <button
+                    className="focus:outline-none"
+                    type="button"
+                    onClick={toggleVisibility}
+                  >
+                    {isVisible ? (
+                      <IoEye className="text-2xl text-teal-600 text-default-400 pointer-events-none" />
+                    ) : (
+                      <IoEyeOff className="text-2xl text-teal-500/80 text-default-400 pointer-events-none" />
+                    )}
+                  </button>
+                }
+                type={isVisible ? "text" : "password"}
+                className="max-w-xs mb-2"
+              />
+              <NextLink href="/home" passHref>
+                <button
+                  type="button"
+                  title="Start Login"
+                  className="w-full py-3 px-6 text-center rounded-full transition bg-gradient-to-r from-teal-500 via-teal-100/100 to-teal-500 shadow-md sm:w-max"
+                >
+                  <span className="block text-[#1c100c] font-semibold text-sm">
+                    Sign Up
+                  </span>
                 </button>
               </NextLink>
             </form>
