@@ -46,6 +46,13 @@ const SignupPage = () => {
                 variant="bordered"
                 className="max-w-xs mb-2"
               />
+              <Input
+                type="email"
+                label="Email"
+                isRequired
+                variant="bordered"
+                className="max-w-xs mb-2"
+              />
             </form>
           </div>
         </div>
