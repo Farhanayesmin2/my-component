@@ -4,9 +4,9 @@ import React from "react";
 const LoginPage = () => {
   return (
     <div className="flex items-center justify-center h-screen font-sans">
-      <div className="bg-white border-2 border-r-teal-400  w-full max-w-[768px] h-[480px] relative overflow-hidden">
+      <div className="bg-white border-2 border-r-teal-400 rounded-3xl shadow-xl w-full max-w-[768px] h-[480px] relative overflow-hidden">
         <div className="grid grid-cols-1 md:grid-cols-2 h-full">
-          <div className="hidden md:flex items-center justify-center rounded-full bg-teal-500 text-white  h-full">
+          <div className="hidden md:flex items-center justify-center rounded-full bg-teal-500 text-white rounded-r-[40%] rounded-l-3xl h-full">
             <div className="flex flex-col items-center p-6 text-center">
               <h1 className="text-2xl font-bold mb-4">Welcome Back!</h1>
               <p className="mb-4">
