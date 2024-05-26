@@ -101,6 +101,19 @@ const SignupPage = () => {
               </NextLink>
             </form>
           </div>
+          <div className="hidden md:flex items-center justify-center  bg-teal-500  text-white h-full">
+            <div className="flex flex-col items-center p-6 text-center">
+              <h1 className="text-2xl font-bold mb-4">Welcome Back!</h1>
+              <p className="mb-4">
+                Enter your personal details to use all of our site features
+              </p>
+              <NextLink href="/login">
+              <button className="bg-white text-teal-500 py-2 px-4 rounded-full">
+                Login
+              </button>
+              </NextLink>
+            </div>
+          </div>
         </div>
       </div>
     </div>
