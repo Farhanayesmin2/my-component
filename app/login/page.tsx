@@ -3,6 +3,16 @@ import React from "react";
 import { FaGooglePlusG, FaFacebookF } from "react-icons/fa";
 import { Input } from "@nextui-org/input";
 const LoginPage = () => {
+  const [value, setValue] = React.useState("woodcnc@example.com");
+
+  const validateEmail = (value) =>
+    value.match(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i);
+
+  const isInvalid = React.useMemo(() => {
+    if (value === "") return false;
+    return validateEmail(value) ? false : true;
+  }, [value]);
+
   return (
     <div className="flex items-center justify-center h-screen font-sans">
       <div className="bg-white border-2 border-r-teal-400 rounded-3xl shadow-xl w-full max-w-[768px] h-[480px] relative overflow-hidden">
@@ -46,6 +56,18 @@ const LoginPage = () => {
                 label="Name"
                 isRequired
                 variant="bordered"
+                className="max-w-xs mb-2"
+              />
+              <Input
+                value={value}
+                type="email"
+                label="Email"
+                isRequired
+                variant="bordered"
+                isInvalid={isInvalid}
+                color={isInvalid ? "danger" : "default"}
+                errorMessage={isInvalid && "Please enter a valid email"}
+                onValueChange={setValue}
                 className="max-w-xs mb-2"
               />
             </form>
