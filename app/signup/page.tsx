@@ -3,7 +3,7 @@ import React from "react";
 import { FaGooglePlusG } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
 import { Input } from "@nextui-org/input";
-
+import NextLink from "next/link";
 const [value, setValue] = React.useState("woodcnc@example.com");
 
 const validateEmail = (value) =>
@@ -14,6 +14,9 @@ const isInvalid = React.useMemo(() => {
   return validateEmail(value) ? false : true;
 }, [value]);
 
+const [isVisible, setIsVisible] = React.useState(false);
+
+const toggleVisibility = () => setIsVisible(!isVisible);
 const SignupPage = () => {
   return (
     <div className="flex items-center justify-center h-screen font-serif">
@@ -62,6 +65,11 @@ const SignupPage = () => {
                 onValueChange={setValue}
                 className="max-w-xs mb-2"
               />
+              <NextLink href="/login">
+                <button className="bg-white text-teal-500 py-2 px-4 rounded-full">
+                  Login
+                </button>
+              </NextLink>
             </form>
           </div>
         </div>
