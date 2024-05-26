@@ -4,7 +4,10 @@ import { FaGooglePlusG } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
 import { Input } from "@nextui-org/input";
 import NextLink from "next/link";
-const [value, setValue] = React.useState("woodcnc@example.com");
+import { IoEye, IoEyeOff } from "react-icons/io5";
+
+const SignupPage = () => {
+  const [value, setValue] = React.useState("woodcnc@example.com");
 
 const validateEmail = (value) =>
   value.match(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}$/i);
@@ -17,7 +20,7 @@ const isInvalid = React.useMemo(() => {
 const [isVisible, setIsVisible] = React.useState(false);
 
 const toggleVisibility = () => setIsVisible(!isVisible);
-const SignupPage = () => {
+
   return (
     <div className="flex items-center justify-center h-screen font-serif">
       <div className="bg-white border-2 border-l-teal-400 rounded-3xl shadow-xl w-full max-w-[768px] h-[480px] relative overflow-hidden">
