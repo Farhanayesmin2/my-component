@@ -2,6 +2,7 @@
 import React from "react";
 import { FaGooglePlusG, FaFacebookF } from "react-icons/fa";
 import { Input } from "@nextui-org/input";
+import { IoEye, IoEyeOff } from "react-icons/io5";
 const LoginPage = () => {
   const [value, setValue] = React.useState("woodcnc@example.com");
 
