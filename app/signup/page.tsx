@@ -14,7 +14,6 @@ const isInvalid = React.useMemo(() => {
   return validateEmail(value) ? false : true;
 }, [value]);
 
-
 const SignupPage = () => {
   return (
     <div className="flex items-center justify-center h-screen font-serif">
@@ -52,10 +51,15 @@ const SignupPage = () => {
                 className="max-w-xs mb-2"
               />
               <Input
+                value={value}
                 type="email"
                 label="Email"
                 isRequired
                 variant="bordered"
+                isInvalid={isInvalid}
+                color={isInvalid ? "danger" : "default"}
+                errorMessage={isInvalid && "Please enter a valid email"}
+                onValueChange={setValue}
                 className="max-w-xs mb-2"
               />
             </form>
