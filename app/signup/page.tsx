@@ -2,6 +2,9 @@
 import React from "react";
 import { FaGooglePlusG } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
+import { Input } from "@nextui-org/input";
+
+// Inside the form
 
 // Inside the form, next to the Google Plus icon
 
@@ -35,6 +38,14 @@ const SignupPage = () => {
                   <FaFacebookF />
                 </a>
               </div>
+              <Input
+                placeholder="Enter your name"
+                type="name"
+                label="Name"
+                isRequired
+                variant="bordered"
+                className="max-w-xs mb-2"
+              />
             </form>
           </div>
         </div>
