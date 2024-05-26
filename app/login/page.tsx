@@ -13,6 +13,9 @@ const LoginPage = () => {
     if (value === "") return false;
     return validateEmail(value) ? false : true;
   }, [value]);
+  // for visible password
+  const [isVisible, setIsVisible] = React.useState(false);
+  const toggleVisibility = () => setIsVisible(!isVisible);
 
   return (
     <div className="flex items-center justify-center h-screen font-sans">
@@ -69,6 +72,26 @@ const LoginPage = () => {
                 color={isInvalid ? "danger" : "default"}
                 errorMessage={isInvalid && "Please enter a valid email"}
                 onValueChange={setValue}
+                className="max-w-xs mb-2"
+              />
+              <Input
+                label="Password"
+                variant="bordered"
+                placeholder="Enter your password"
+                endContent={
+                  <button
+                    className="focus:outline-none"
+                    type="button"
+                    onClick={toggleVisibility}
+                  >
+                    {isVisible ? (
+                      <IoEye className="text-2xl text-teal-600 text-default-400 pointer-events-none" />
+                    ) : (
+                      <IoEyeOff className="text-2xl text-teal-500/80  text-default-400 pointer-events-none" />
+                    )}
+                  </button>
+                }
+                type={isVisible ? "text" : "password"}
                 className="max-w-xs mb-2"
               />
             </form>
