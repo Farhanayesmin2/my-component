@@ -4,11 +4,16 @@ import { FaGooglePlusG } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
 import { Input } from "@nextui-org/input";
 
-// Inside the form
+const [value, setValue] = React.useState("woodcnc@example.com");
 
-// Inside the form, next to the Google Plus icon
+const validateEmail = (value) =>
+  value.match(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}$/i);
 
-// Inside the form
+const isInvalid = React.useMemo(() => {
+  if (value === "") return false;
+  return validateEmail(value) ? false : true;
+}, [value]);
+
 
 const SignupPage = () => {
   return (
