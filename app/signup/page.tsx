@@ -101,7 +101,7 @@ const SignupPage = () => {
               </NextLink>
             </form>
           </div>
-          <div className="hidden md:flex items-center justify-center  bg-teal-500  text-white h-full">
+          <div className="hidden md:flex items-center justify-center rounded-full  bg-teal-500  text-white rounded-l-[40%] rounded-r-3xl h-full">
             <div className="flex flex-col items-center p-6 text-center">
               <h1 className="text-2xl font-bold mb-4">Welcome Back!</h1>
               <p className="mb-4">
