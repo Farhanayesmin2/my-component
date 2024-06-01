@@ -60,7 +60,59 @@ const DashboardSidebar = () => {
             )}
           </button>
         </div>
-     
+        {/* Sidebar Content */}
+        <nav className="px-4 py-8">
+          <ul className="space-y-2">
+            <SidebarItem
+              icon={<FiHome />}
+              label="Dashboard"
+              isOpen={isOpen}
+              to="/dashboard"
+            />
+            <SidebarItem
+              icon={<FiUpload />}
+              label="Upload"
+              isOpen={isOpen}
+              to="/dashboard/add_product"
+            />
+            <SidebarItem
+              icon={<MdProductionQuantityLimits />}
+              label="All Products Items"
+              isOpen={isOpen}
+              to="/dashboard/my_products"
+            />
+            <SidebarItem
+              icon={<FiBarChart2 />}
+              label="Main Category"
+              isOpen={isOpen}
+              to="/dashboard/main_cat"
+            />
+            <SidebarItem
+              icon={<RxAlignTop />}
+              label="Top Category"
+              isOpen={isOpen}
+              to="/dashboard/top_cat"
+            />
+            <SidebarItem
+              icon={<VscTypeHierarchySub />}
+              label="Sub Category"
+              isOpen={isOpen}
+              to="/dashboard/sub_cat"
+            />
+            <SidebarItem
+              icon={<FiSend />}
+              label="Reviews"
+              isOpen={isOpen}
+              to="/review"
+            />
+            <SidebarItem
+              icon={<FiTrash2 />}
+              label="Delete User"
+              isOpen={isOpen}
+              to="/delete"
+            />
+          </ul>
+        </nav>
       </div>
 
       {/* Overlay */}
