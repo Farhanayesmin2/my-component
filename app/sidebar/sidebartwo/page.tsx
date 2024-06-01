@@ -8,6 +8,8 @@ import {
   FiHome,
   FiUpload,
   FiBarChart2,
+  FiMessageSquare,
+  FiMonitor,
   FiTrash2,
   FiSend,
 } from "react-icons/fi";
