@@ -88,7 +88,13 @@ const DashboardSidebar = () => {
       </div>
 
       {/* Overlay */}
-     
+      {isOpen && (
+        <div
+          className="fixed inset-0 bg-white opacity-25"
+          onClick={handleToggle}
+          style={{ zIndex: 9 }}
+        ></div>
+      )}
     </div>
   );
 };
