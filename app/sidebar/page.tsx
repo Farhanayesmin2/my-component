@@ -18,7 +18,18 @@ import { VscTypeHierarchySub } from "react-icons/vsc";
 import { MdProductionQuantityLimits } from "react-icons/md";
 
 const SidebarItem = ({ icon, label, isOpen, to }) => (
-
+  <li
+    className={`flex items-center text-gray-700 hover:text-teal-500 font-medium py-2 px-4 ${
+      isOpen ? "justify-start" : "justify-center"
+    }`}
+  >
+    <Link href={to}>
+      <div className="flex items-center">
+        {icon}
+        {isOpen && <span className="ml-2 inline">{label}</span>}
+      </div>
+    </Link>
+  </li>
 );
 
 const DashboardSidebar = () => {
