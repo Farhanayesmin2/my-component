@@ -15,6 +15,17 @@ import { RxAlignTop } from "react-icons/rx";
 import { VscTypeHierarchySub } from "react-icons/vsc";
 import { MdProductionQuantityLimits } from "react-icons/md";
 
+const sidebarItems = [
+  { icon: <FiHome />, label: "Dashboard", to: "/dashboard" },
+  { icon: <FiUpload />, label: "Upload", to: "/dashboard/add_product" },
+  { icon: <MdProductionQuantityLimits />, label: "All Products Items", to: "/dashboard/my_products" },
+  { icon: <FiBarChart2 />, label: "Main Category", to: "/dashboard/main_cat" },
+  { icon: <RxAlignTop />, label: "Top Category", to: "/dashboard/top_cat" },
+  { icon: <VscTypeHierarchySub />, label: "Sub Category", to: "/dashboard/sub_cat" },
+  { icon: <FiSend />, label: "Reviews", to: "/review" },
+  { icon: <FiTrash2 />, label: "Delete User", to: "/delete" }
+];
+
 const SidebarItem = ({ icon, label, isOpen, to }) => (
   <li
     className={`flex items-center text-gray-700 hover:text-teal-500 font-medium py-2 px-4 ${
