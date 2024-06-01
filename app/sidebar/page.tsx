@@ -40,7 +40,7 @@ const DashboardSidebar = () => {
   };
 
   return (
-    <div className="flex">
+    <div className="flex ">
       {/* Sidebar */}
       <div
         className={`fixed inset-y-0 z-10 bg-white border-r transition duration-300 ease-in-out transform ${
@@ -48,7 +48,7 @@ const DashboardSidebar = () => {
         } ${isOpen ? "w-[50%] sm:w-[20%]" : "w-0"}`}
       >
         {/* Sidebar Toggle Button */}
-        <div className="pl-2 pt-2">
+        <div className="pl-2 pt-2 mt-10">
           <button
             onClick={handleToggle}
             className="z-10 w-12 h-12 bg-white rounded-full shadow-md transition duration-300 ease-in-out flex items-center justify-center"
