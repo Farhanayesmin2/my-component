@@ -59,7 +59,7 @@ const DashboardSidebar = () => {
         } ${isOpen ? "w-[50%] sm:w-[20%]" : "w-0"}`}
       >
         {/* Sidebar Toggle Button */}
-        <div className="pl-2 pt-2">
+        <div className="pl-2 pt-2 mt-12">
           <button
             onClick={handleToggle}
             className="z-10 w-12 h-12 bg-white rounded-full shadow-md transition duration-300 ease-in-out flex items-center justify-center"
