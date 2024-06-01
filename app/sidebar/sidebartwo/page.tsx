@@ -71,7 +71,20 @@ const DashboardSidebar = () => {
             )}
           </button>
         </div>
-      
+        {/* Sidebar Content */}
+        <nav className="px-4 py-8">
+          <ul className="space-y-2">
+            {sidebarItems.map((item, index) => (
+              <SidebarItem
+                key={index}
+                icon={item.icon}
+                label={item.label}
+                isOpen={isOpen}
+                to={item.to}
+              />
+            ))}
+          </ul>
+        </nav>
       </div>
 
       {/* Overlay */}
